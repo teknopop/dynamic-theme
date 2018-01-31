@@ -169,12 +169,6 @@ require_once( get_template_directory()  . '/inc/template-tags.php' );
 // Other required files
 require get_template_directory() . '/aq_resizer.php';
 
-// Short excerpt
-function custom_excerpt_length( $length ) {
-	return 50;
-}
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
 // TRIM CHARACTERS
 function trim_characters( $text, $length = 45, $append = '&hellip;' ) {
 
@@ -355,6 +349,12 @@ if( function_exists('acf_add_options_page') ) {
                     'name' => 'api_key',
                     'type' => 'text',
                 ),
+				array (
+                    'key' => 'excerpt',
+                    'label' => 'Nombre de mots Introduction',
+                    'name' => 'excerpt',
+                    'type' => 'text',
+                ),
                 array (
                     'key' => 'slider',
                     'label' => 'Slider',
@@ -381,7 +381,13 @@ if( function_exists('acf_add_options_page') ) {
         endif;
 }
 
-
+// Short excerpt
+function custom_excerpt_length( $length ) {
+	$nb = get_field('excerpt', 'option');
+	if ($nb) { return $nb; }
+	return 50;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 /*nom des images uploadés renommés*/
 add_filter('sanitize_file_name', 'remove_accents' );
 //

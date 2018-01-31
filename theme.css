@@ -169,7 +169,7 @@ select.form-control:not([size]):not([multiple]) {height:50px;}
 
 /*TINY*/
 .seo-h2 {font-size:30px; font-weight:300;margin-bottom:20px;}
-.seo-h3 {color:#eb9300;font-family: 'Open Sans', sans-serif;font-size:20px; font-weight:600;}
+.seo-h3 {color:#eb9300; font-size:20px; font-weight:600;}
 .seo-orange {color:#eb9300;}
 .seo-blanc {color:#fff;}
 
