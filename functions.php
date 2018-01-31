@@ -373,7 +373,7 @@ if( function_exists('acf_add_options_page') ) {
                     'label' => 'Favicon',
                     'instructions' => 'ICO format only',
                     'name' => 'favicon',
-                    'mime_types' => 'ico',
+                    'mime_types' => 'ico, png',
                     'return_format' => 'url',
                     'type' => 'image',
                 )
