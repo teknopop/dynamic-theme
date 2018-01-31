@@ -354,6 +354,7 @@ if( function_exists('acf_add_options_page') ) {
                     'label' => 'Nombre de mots Introduction',
                     'name' => 'excerpt',
                     'type' => 'text',
+					'default_value' => '50',
                 ),
                 array (
                     'key' => 'slider',
@@ -365,6 +366,15 @@ if( function_exists('acf_add_options_page') ) {
                     'key' => 'logo',
                     'label' => 'Logo',
                     'name' => 'logo',
+                    'type' => 'image',
+                ),
+                array (
+                    'key' => 'favicon',
+                    'label' => 'Favicon',
+                    'instructions' => 'ICO format only',
+                    'name' => 'favicon',
+                    'mime_types' => 'ico',
+                    'return_format' => 'url',
                     'type' => 'image',
                 )
             ),

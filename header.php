@@ -13,6 +13,9 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<?php $fav = get_field('favicon', 'option'); if ($fav) { ?>
+	<link rel="shortcut icon" href="<?php echo $fav; ?>">
+	<?php } ?>
 	<?php wp_head(); ?>
 </head>
 
